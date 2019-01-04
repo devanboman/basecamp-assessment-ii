@@ -5,7 +5,11 @@
  * Assign the keys the appropriate values.
  */
 
-// CODE HERE
+var me = {
+  firstName: "Devan",
+  age: 27,
+  state: "Utah"
+};
 
 /**
  * #2
@@ -14,7 +18,7 @@
  * The new key should be 'faveColor'. Set it to your favorite color as a string.
  */
 
-// CODE HERE
+me.faveColor = "blue";
 
 /**
  * #3
@@ -29,7 +33,7 @@ var message = {
   userName: me.firstname
 };
 // DON'T TOUCH THE CODE ABOVE
-// CODE HERE
+message["text"] = "Cool";
 
 /**
  * #4
@@ -39,7 +43,14 @@ var message = {
  * downVote() should take in a number, subtract one from it, and return the number.
  */
 
-// CODE HERE
+var adjustCount = {
+  upVote: function(num1){
+    return num1+1;
+  },
+  downVote: function(num1){
+    return num1-1
+  }
+};
 
 /**
  * #5
@@ -47,7 +58,7 @@ var message = {
  * Create an array called 'myFriends' with four of your friends names.
  */
 
-// CODE HERE
+var myFriends = ["You", "think I", "Have four", "Friends?"]
 
 /**
  * #6
@@ -55,7 +66,7 @@ var message = {
  * Add a fifth friends name to the end of your 'myFriends' array.
  */
 
-// CODE HERE
+myFriends.push("HAHAHAH!");
 
 /**
  * #7
@@ -67,7 +78,7 @@ var message = {
 // DON'T TOUCH THE CODE BELOW
 var myArray = [1, 2, 3, 4];
 // DON'T TOUCH THE CODE ABOVE
-// CODE HERE
+var myArrayCopy = myArray.clone();
 
 /**
  * #8
@@ -80,7 +91,9 @@ var myArray = [1, 2, 3, 4];
 var myNumbers = [333, 1, 4, 5, 511, 34, 88, 77, 222];
 //DON'T TOUCH THE CODE ABOVE
 function evensOnly() {
-  // CODE HERE
+  for (i=0;i<myNumbers.length;i++){
+    if(i%2 === 0) 
+  }
 }
 
 /**
@@ -90,7 +103,7 @@ function evensOnly() {
  * Assign it to a variable called 'trueFriends'.
  */
 
-// CODE HERE
+var trueFriends = [];
 var peopleIknow = [
   { name: "Steve", friend: true },
   { name: "Dan", friend: false },
@@ -99,6 +112,8 @@ var peopleIknow = [
   { name: "Michelle", friend: false },
   { name: "Holly", friend: true }
 ];
+trueFriends = peopleIknow.filter(name => name.friend);
+console.log(trueFriends);
 
 /**
  * #10
@@ -110,3 +125,12 @@ var peopleIknow = [
  */
 
 let randomNumbers = [1, 3453, 34, 456, 32, 3, 2, 0];
+let indexes = [];
+
+function indexFinder(arr){
+  for(i=0: i<arr.length;i++){
+    indexes.push(i);
+  }
+  return indexes;
+}
+console.log(indexFinder(randomNumbers));
